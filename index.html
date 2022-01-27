@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Bidang Dua Dimensi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="">SuugakuLab.</a> </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#Tentang">Tentang</a></li>
+                    <li><a href="#Anggota Kelompok">Anggota Kelompok</a></li>
+                    <li><a href="#Luas Lingkaran">Luas Lingkaran</a></li>
+                    <li><a href="#Luas Segitiga">Luas Segitiga</a></li>
+                    <li><a href="#Luas Persegi">Luas Persegi</a></li>
+                    <li><a href="#Luas Jajar Genjang"> Luas Jajar Genjang</a></li>                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        
+        <!-- Untuk Tentang -->
+        <section id="Tentang">
+            <img src="https://image.freepik.com/free-vector/learning-concept-illustration_114360-6186.jpg"/>
+            <div class="kolom">
+                <p class="Deskripsi">Ujian Praktek Matematika</p>
+                <h2>Web ini berisi tentang kalkulator sederhana yang dapat menghitung luas beberapa bangun datar</h2>
+            </div>
+        </section>
+
+        <!-- Anggota Kelompok -->
+        <section id="Anggota Kelompok">
+            <img src="https://image.freepik.com/free-vector/personal-memories-concept_23-2148403720.jpg"/>
+            <div class="kolom">
+                <p class="Deskripsi">Nama Anggota Kelompok:</p>
+                <h2>Fauzan Aliffio Fathan</h2>
+                <h2>Muhammad Chafizhun Amin</h2>
+            </div>
+        </section>
+
+        <!-- Luas Lingkaran -->
+        <section id="Luas Lingkaran">
+            <img src="https://image.freepik.com/free-vector/geometric-shapes-children-circle-black-white-worksheet-learning-shapes_122784-4155.jpg"/>
+            <div class="kolom">
+                <p class="Deskripsi">Menentukan Luas Lingkaran</p>
+                <h2>Menghitung Luas Lingkaran</h2>
+                <p><button class="tbl-pink" onclick="fungsiLingkaran()">Masukkan Angka</button></p>
+            </div>
+        </section>
+        
+        <!-- Luas Segitiga -->
+        <section id="Luas Segitiga">
+            <img src="https://image.freepik.com/free-vector/learning-triangle-shape-children-basic-2d-shapes_122784-4222.jpg"/>
+            <div class="kolom">
+                <p class="Deskripsi">Menentukan Segitiga</p>
+                <h2>Menghitung Luas Segitiga</h2>
+                <p><button class="tbl-pink" onclick="fungsiSegitiga()">Masukkan Angka</button></p>
+            </div>
+        </section>
+        
+        <!-- Luas Persegi -->
+        <section id="Luas Persegi">
+            <img src="https://image.freepik.com/free-vector/learning-circle-shape-children-basic-2d-shapes_122784-4121.jpg"/>
+            <div class="kolom">
+                <p class="Deskripsi">Menentukan Luas Persegi</p>
+                <h2>Menghitung Luas Persegi</h2>
+                <p><button class="tbl-pink" onclick="fungsiPersegi()">Masukkan Angka</button></p>
+            </div>
+        </section>
+        
+        <!-- Luas Jajar Genjang -->
+        <section id="Luas Jajar Genjang">
+            <img src="https://image.freepik.com/free-vector/sticker-parallelogram-shape-white-background_1308-70477.jpg"/>
+            <div class="kolom">
+                <p class="Deskripsi">Menentukan Luas Jajar Genjang</p>
+                <h2>Menghitung Luas Jajar Genjang</h2>
+                <p><button class="tbl-pink" onclick="fungsiJajargenjang()">Masukkan Angka</button></p>
+            </div>
+        </section>
+    </div>
+     
+    <!-- jajargenjang -->
+    <div class="jajargenjang-modal">
+        <div class="jajargenjang-box">
+            <span class="jajargenjang-close">&times;</span>
+            <div class="jajargenjang-content">
+                <form class="function-form" name="jajargenjang" action="" method="get">
+                    Masukkan panjang alas jajar genjang (dalam satuan cm):<br/><br/>
+                    <input class="function-input" type="number" name="alasjajargenjang" value=""><br/><br/>
+                    Masukkan tinggi jajar genjang (dalam satuan cm):<br/><br/>
+                    <input class="function-input" type="number" name="tinggijajargenjang" value=""><br/><br/>
+                    <input class="function-form-btn" type="button" name="jajargenjangbutton" value="Selesai" onclick="luasJajargenjang(this.form)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- persegi -->
+    <div class="persegi-modal">
+        <div class="persegi-box">
+            <span class="persegi-close">&times;</span>
+            <div class="persegi-content">
+                <form class="function-form" name="persegi" action="" method="get">
+                    Masukkan panjang sisi persegi (dalam satuan cm):<br/><br/>
+                    <input class="function-input" type="number" name="sisipersegi" value=""><br/><br/>
+                    <input class="function-form-btn" type="button" name="persegibutton" value="Selesai" onclick="luasPersegi(this.form)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- segitiga -->
+    <div class="segitiga-modal">
+        <div class="segitiga-box">
+            <span class="segitiga-close">&times;</span>
+            <div class="segitiga-content">
+                <form class="function-form" name="segitiga" action="" method="get">
+                    Masukkan panjang tinggi segitiga (dalam satuan cm):<br/><br/>
+                    <input class="function-input" type="number" name="tinggisegitiga" value=""><br/><br/>
+                    Masukkan panjang alas segitiga (dalam satuan cm):<br/><br/>
+                    <input class="function-input" type="number" name="alassegitiga" value=""><br/><br/>
+                    <input class="function-form-btn" type="button" name="segitigabutton" value="Selesai" onclick="luasSegitiga(this.form)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- lingkaran -->
+    <div class="lingkaran-modal">
+        <div class="lingkaran-box">
+            <span class="lingkaran-close">&times;</span>
+            <div class="lingkaran-content">
+                <form class="function-form" name="lingkaran" action="" method="get">
+                    Masukkan jari-jari lingkaran (dalam satuan cm):<br/><br/>
+                    <input class="function-input" type="number" name="jarijari" value=""><br/><br/>
+                    <input class="function-form-btn" type="button" name="lingkaranbutton" value="Selesai" onclick="luasLingkaran(this.form)">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="function.js"></script>
+</body>
+</html>
